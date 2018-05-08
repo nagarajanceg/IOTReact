@@ -1,10 +1,16 @@
 import React, {PropTypes} from 'react';
 import Header from './common/Header'
 class App extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            badge: 10
+        };
+    }
     render(){
         return(
             <div className="container-fluid">
-            <Header/>
+            <Header myVal={this.state.badge}/>
                 {this.props.children}
             </div>
         );
